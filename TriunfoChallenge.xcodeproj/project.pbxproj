@@ -15,6 +15,14 @@
 		EC15ECFE2873822300CFEE8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC15ECFC2873822300CFEE8D /* LaunchScreen.storyboard */; };
 		EC15ED06287C45E000CFEE8D /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED05287C45E000CFEE8D /* PopularCollectionViewCell.swift */; };
 		EC15ED08287C468500CFEE8D /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED07287C468500CFEE8D /* NowPlayingCollectionViewCell.swift */; };
+		EC15ED0E287D95F300CFEE8D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED0D287D95F300CFEE8D /* Movie.swift */; };
+		EC15ED15287DA53600CFEE8D /* Movie+TrendingToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED10287DA53500CFEE8D /* Movie+TrendingToday.swift */; };
+		EC15ED16287DA53600CFEE8D /* Movie+Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED11287DA53600CFEE8D /* Movie+Popular.swift */; };
+		EC15ED17287DA53600CFEE8D /* Movie+Upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED12287DA53600CFEE8D /* Movie+Upcoming.swift */; };
+		EC15ED18287DA53600CFEE8D /* Movie+TrendingThisWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED13287DA53600CFEE8D /* Movie+TrendingThisWeek.swift */; };
+		EC15ED19287DA53600CFEE8D /* Movie+NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED14287DA53600CFEE8D /* Movie+NowPlaying.swift */; };
+		EC15ED1B287DAAC700CFEE8D /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED1A287DAAC700CFEE8D /* TrendingViewController.swift */; };
+		EC15ED1D287DC16100CFEE8D /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED1C287DC16100CFEE8D /* FeaturedViewController+UICollectionViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		EC15ECFF2873822300CFEE8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC15ED05287C45E000CFEE8D /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC15ED07287C468500CFEE8D /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC15ED0D287D95F300CFEE8D /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		EC15ED10287DA53500CFEE8D /* Movie+TrendingToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+TrendingToday.swift"; sourceTree = "<group>"; };
+		EC15ED11287DA53600CFEE8D /* Movie+Popular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Popular.swift"; sourceTree = "<group>"; };
+		EC15ED12287DA53600CFEE8D /* Movie+Upcoming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Upcoming.swift"; sourceTree = "<group>"; };
+		EC15ED13287DA53600CFEE8D /* Movie+TrendingThisWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+TrendingThisWeek.swift"; sourceTree = "<group>"; };
+		EC15ED14287DA53600CFEE8D /* Movie+NowPlaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+NowPlaying.swift"; sourceTree = "<group>"; };
+		EC15ED1A287DAAC700CFEE8D /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		EC15ED1C287DC16100CFEE8D /* FeaturedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,7 @@
 			children = (
 				EC15ECF12873821B00CFEE8D /* AppDelegate.swift */,
 				EC15ECF32873821B00CFEE8D /* SceneDelegate.swift */,
+				EC15ED0F287D960500CFEE8D /* Model */,
 				EC15ED0C287C48BB00CFEE8D /* SupportingFiles */,
 				EC15ED09287C46FF00CFEE8D /* Controllers */,
 				EC15ED0A287C471700CFEE8D /* View */,
@@ -73,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				EC15ECF52873821B00CFEE8D /* FeaturedViewController.swift */,
+				EC15ED1A287DAAC700CFEE8D /* TrendingViewController.swift */,
+				EC15ED1C287DC16100CFEE8D /* FeaturedViewController+UICollectionViewDataSource.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -95,6 +114,19 @@
 				EC15ECFA2873822300CFEE8D /* Assets.xcassets */,
 			);
 			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		EC15ED0F287D960500CFEE8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC15ED14287DA53600CFEE8D /* Movie+NowPlaying.swift */,
+				EC15ED11287DA53600CFEE8D /* Movie+Popular.swift */,
+				EC15ED13287DA53600CFEE8D /* Movie+TrendingThisWeek.swift */,
+				EC15ED10287DA53500CFEE8D /* Movie+TrendingToday.swift */,
+				EC15ED12287DA53600CFEE8D /* Movie+Upcoming.swift */,
+				EC15ED0D287D95F300CFEE8D /* Movie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,10 +200,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC15ED15287DA53600CFEE8D /* Movie+TrendingToday.swift in Sources */,
 				EC15ED08287C468500CFEE8D /* NowPlayingCollectionViewCell.swift in Sources */,
 				EC15ED06287C45E000CFEE8D /* PopularCollectionViewCell.swift in Sources */,
+				EC15ED0E287D95F300CFEE8D /* Movie.swift in Sources */,
+				EC15ED1D287DC16100CFEE8D /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */,
+				EC15ED16287DA53600CFEE8D /* Movie+Popular.swift in Sources */,
+				EC15ED1B287DAAC700CFEE8D /* TrendingViewController.swift in Sources */,
+				EC15ED18287DA53600CFEE8D /* Movie+TrendingThisWeek.swift in Sources */,
+				EC15ED19287DA53600CFEE8D /* Movie+NowPlaying.swift in Sources */,
 				EC15ECF62873821B00CFEE8D /* FeaturedViewController.swift in Sources */,
 				EC15ECF22873821B00CFEE8D /* AppDelegate.swift in Sources */,
+				EC15ED17287DA53600CFEE8D /* Movie+Upcoming.swift in Sources */,
 				EC15ECF42873821B00CFEE8D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
