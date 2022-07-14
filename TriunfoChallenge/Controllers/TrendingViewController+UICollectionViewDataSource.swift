@@ -7,23 +7,20 @@
 
 import UIKit
 
-class TrendingViewController_UICollectionViewDataSource: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+extension TrendingViewController{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "trendingCell", for: indexPath) as? TrendingCollectionViewCell
+        
+        cell?.title.text = trendingTodayMovies[indexPath.item].title
+        cell?.dateLabel.text = trendingTodayMovies[indexPath.item].releaseDate
+        cell?.image.image = UIImage(named: trendingTodayMovies[indexPath.item].poster)
+        
+        return cell ?? UICollectionViewCell()
     }
-    */
-
 }
