@@ -7,27 +7,49 @@
 
 import UIKit
 
-class TrendingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class TrendingViewController: UIViewController{
     
-    let trendingThisWeekMovies = Movie.trendingThisWeekMovies()
-    let trendingTodayMovies = Movie.trendingTodayMovies()
+    var trendingThisWeekMovies: [Movie] = []
+    var trendingTodayMovies: [Movie] = []
     
-    @IBOutlet var trendingCollectionView: UICollectionView!
     
+    @IBOutlet var trendingTableView: UITableView!
+    @IBOutlet var segmentedControl: UISegmentedControl!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        trendingCollectionView.dataSource = self
-        trendingCollectionView.delegate = self
-    }
-    /*
-    @IBAction func didChangeSegment (_ sender: UISegmentedControl) -> UICollectionView{
-        if sender.selectedSegmentIndex == 0{
-            return trendingTodayMovies
-        } else if sender.selectedSegmentIndex == 1{
-            return trendingThisWeekMovies
-        } else{
-            return 0
+        trendingTableView.delegate = self
+        trendingTableView.dataSource = self
+        
+        Task {
+            self.trendingTodayMovies = await Movie.trendingTodayAPI()
+            self.trendingTableView.reloadData()
         }
-    } */
+        
+        Task {
+            self.trendingThisWeekMovies = await Movie.trendingThisWeekAPI()
+            self.trendingTableView.reloadData()
+        }
+
+    }
+    
+    @IBAction func segmentedChanged(_ sender: Any) {
+        trendingTableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsViewController{
+            let movie = sender as? Movie
+            destination.movie = movie
+        }
+    }
+    
+   
+    
+
+    
+    
+    
+    
 }

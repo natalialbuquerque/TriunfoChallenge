@@ -15,11 +15,11 @@ extension TrendingViewController{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "trendingCell", for: indexPath) as? TrendingCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "trendingCell", for: indexPath) as? TrendingTableViewCell
         
         cell?.title.text = trendingTodayMovies[indexPath.item].title
         cell?.dateLabel.text = trendingTodayMovies[indexPath.item].releaseDate
-        cell?.image.image = UIImage(named: trendingTodayMovies[indexPath.item].poster)
+        cell?.image.image = UIImage(named: trendingTodayMovies[indexPath.item].posterPath)
         
         return cell ?? UICollectionViewCell()
     }

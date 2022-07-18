@@ -15,30 +15,38 @@ class DetailsViewController: UIViewController {
     @IBOutlet var posterImage: UIImageView!
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var overviewLabel: UILabel!
+    @IBOutlet var genresLabel: UILabel!
     
     
     
     var movie: Movie?
     
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
-
-        print(movie)
-        
         
         guard let movie = movie else {
             return
         }
         
         title = movie.title
-        // esse title é uma propriedade que vem pronta no UIViewController
-        backdropImage.image = UIImage(named: movie.backdrop)
+        
+        Task {
+            let imageData = await Movie.downloadImageData(withPath: movie.backdropPath)
+            let image = UIImage(data: imageData) ?? UIImage()
+            backdropImage.image = image
+        }
+        
         titleLabel.text = movie.title
-        posterImage.image = UIImage(named: movie.poster)
+        
+        Task {
+            let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
+            let image = UIImage(data: imageData) ?? UIImage()
+            posterImage.image = image
+        }
+        
         ratingLabel.text = "Rating: \(movie.voteAverage)/10"
         overviewLabel.text = movie.overview
-        
-        
+
     }
     
     

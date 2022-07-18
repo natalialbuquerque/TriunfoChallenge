@@ -9,10 +9,11 @@ import UIKit
 
 class FeaturedViewController: UIViewController {
     
-    let popularMovies = Movie.popularMovies()
-    let nowPlayingMovies = Movie.nowPlayingMovies()
-    let upcomingMovies = Movie.upcomingMovies()
+    var popularMovies: [Movie] = []// Movie.popularMovies()
+    var nowPlayingMovies: [Movie] = []//Movie.nowPlayingMovies()
+    var upcomingMovies: [Movie] = [] //Movie.upcomingMovies()
     
+    // let nowPlayingMovies = Movie.nowPlayingMovies
     
     
     @IBOutlet var popularCollectionView: UICollectionView!
@@ -28,9 +29,26 @@ class FeaturedViewController: UIViewController {
         nowPlayingCollectionView.dataSource = self
         nowPlayingCollectionView.delegate = self
         
-       upcomingCollectionView.dataSource = self
-       upcomingCollectionView.delegate = self
+        upcomingCollectionView.dataSource = self
+        upcomingCollectionView.delegate = self
         
+        Task {
+            self.popularMovies = await Movie.popularMoviesAPI()
+            self.popularCollectionView.reloadData()
+        }
+        
+        Task {
+            self.nowPlayingMovies = await Movie.nowPlayingMoviesAPI()
+            self.nowPlayingCollectionView.reloadData()
+        }
+        
+        Task {
+            self.upcomingMovies = await Movie.upcomingMoviesAPI()
+            self.upcomingCollectionView.reloadData()
+        }
+        
+        
+       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,11 +57,9 @@ class FeaturedViewController: UIViewController {
             // vai passar para a próxima tela
             let movie = sender as? Movie
             destination.movie = movie
-            //
-            
         }
-        
     }
+    
     
 }
 
