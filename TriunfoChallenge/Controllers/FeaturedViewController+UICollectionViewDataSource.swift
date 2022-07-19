@@ -81,7 +81,7 @@ extension FeaturedViewController: UICollectionViewDataSource {
         cell?.setup(title: movie.title,year: year, image: UIImage())
         
         Task {
-            let imageData = await Movie.downloadImageData(withPath: movie.backdropPath)
+            let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
             let image: UIImage = UIImage(data: imageData) ?? UIImage()
             cell?.setup(title: movie.title, year: year, image: image)
         }
@@ -102,7 +102,7 @@ extension FeaturedViewController: UICollectionViewDataSource {
         cell?.setup(title: movie.title, year: year, image: UIImage())
         
         Task {
-            let imageData = await Movie.downloadImageData(withPath: movie.backdropPath)
+            let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
             let image: UIImage = UIImage(data: imageData) ?? UIImage()
             cell?.setup(title: movie.title, year: year, image: image)
         }

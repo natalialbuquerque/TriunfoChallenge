@@ -13,9 +13,12 @@ class TrendingViewController: UIViewController{
     var trendingTodayMovies: [Movie] = []
     
     
+    
     @IBOutlet var trendingTableView: UITableView!
     @IBOutlet var segmentedControl: UISegmentedControl!
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,8 +37,19 @@ class TrendingViewController: UIViewController{
 
     }
     
-    @IBAction func segmentedChanged(_ sender: Any) {
+    
+    //@IBAction func segmentedChanged(_ sender: Any) {
+            //}
+    
+    @IBAction func didChangeSegment(_ sender: UISegmentedControl){
+        if sender.selectedSegmentIndex == 0 {
+        
+        }
+        else if sender.selectedSegmentIndex == 1 {
+        }
         trendingTableView.reloadData()
+        
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,12 +58,5 @@ class TrendingViewController: UIViewController{
             destination.movie = movie
         }
     }
-    
-   
-    
-
-    
-    
-    
-    
+ 
 }

@@ -32,6 +32,8 @@
 		EC15ED33288598D800CFEE8D /* TrendingViewControler+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED32288598D800CFEE8D /* TrendingViewControler+UITableViewDataSource.swift */; };
 		EC15ED352885991100CFEE8D /* TrendingViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED342885991100CFEE8D /* TrendingViewController+UITableViewDelegate.swift */; };
 		EC15ED372885A14600CFEE8D /* TrendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED362885A14600CFEE8D /* TrendingTableViewCell.swift */; };
+		EC15ED3B2886E7D700CFEE8D /* SeeAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED3A2886E7D700CFEE8D /* SeeAllViewController.swift */; };
+		EC15ED3D2886F2E700CFEE8D /* SeeAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC15ED3C2886F2E700CFEE8D /* SeeAllTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		EC15ED32288598D800CFEE8D /* TrendingViewControler+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingViewControler+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		EC15ED342885991100CFEE8D /* TrendingViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		EC15ED362885A14600CFEE8D /* TrendingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTableViewCell.swift; sourceTree = "<group>"; };
+		EC15ED3A2886E7D700CFEE8D /* SeeAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllViewController.swift; sourceTree = "<group>"; };
+		EC15ED3C2886F2E700CFEE8D /* SeeAllTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 				EC15ED32288598D800CFEE8D /* TrendingViewControler+UITableViewDataSource.swift */,
 				EC15ED342885991100CFEE8D /* TrendingViewController+UITableViewDelegate.swift */,
 				EC15ED24287EF23700CFEE8D /* DetailsViewController.swift */,
+				EC15ED3A2886E7D700CFEE8D /* SeeAllViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 				EC15ED07287C468500CFEE8D /* NowPlayingCollectionViewCell.swift */,
 				EC15ED1E287DFE7700CFEE8D /* UpcomingCollectionViewCell.swift */,
 				EC15ED362885A14600CFEE8D /* TrendingTableViewCell.swift */,
+				EC15ED3C2886F2E700CFEE8D /* SeeAllTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 				EC15ED08287C468500CFEE8D /* NowPlayingCollectionViewCell.swift in Sources */,
 				EC15ED06287C45E000CFEE8D /* PopularCollectionViewCell.swift in Sources */,
 				EC15ED0E287D95F300CFEE8D /* Movie.swift in Sources */,
+				EC15ED3D2886F2E700CFEE8D /* SeeAllTableViewCell.swift in Sources */,
 				EC15ED1F287DFE7700CFEE8D /* UpcomingCollectionViewCell.swift in Sources */,
 				EC15ED1D287DC16100CFEE8D /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */,
 				EC15ED16287DA53600CFEE8D /* Movie+Popular.swift in Sources */,
@@ -245,6 +252,7 @@
 				EC15ED18287DA53600CFEE8D /* Movie+TrendingThisWeek.swift in Sources */,
 				EC15ED25287EF23700CFEE8D /* DetailsViewController.swift in Sources */,
 				EC15ED19287DA53600CFEE8D /* Movie+NowPlaying.swift in Sources */,
+				EC15ED3B2886E7D700CFEE8D /* SeeAllViewController.swift in Sources */,
 				EC15ED372885A14600CFEE8D /* TrendingTableViewCell.swift in Sources */,
 				EC15ECF62873821B00CFEE8D /* FeaturedViewController.swift in Sources */,
 				EC15ECF22873821B00CFEE8D /* AppDelegate.swift in Sources */,

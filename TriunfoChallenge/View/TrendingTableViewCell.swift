@@ -12,16 +12,15 @@ class TrendingTableViewCell: UITableViewCell {
     static let cellIdentifier = "trendingTableViewCell"
     
     @IBOutlet var imageCell: UIImageView!
+    @IBOutlet var titleLabelCell: UILabel!
+    @IBOutlet var dateLabelCell: UILabel!
     
-    @IBOutlet var imageTableViewCell: UIImageView!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var dateLabel: UILabel!
     
     
     func setup(title: String, image: UIImage, year: String){
-        titleLabel.text = title
-        imageTableViewCell.image = image
-        dateLabel.text = year
+        titleLabelCell.text = title
+        imageCell.image = image
+        dateLabelCell.text = year
     }
         
 

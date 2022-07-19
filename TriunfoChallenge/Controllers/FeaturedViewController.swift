@@ -57,9 +57,20 @@ class FeaturedViewController: UIViewController {
             // vai passar para a próxima tela
             let movie = sender as? Movie
             destination.movie = movie
+        } else if let destination = segue.destination as? SeeAllViewController{
+            if segue.identifier == "popularSeeAllSegue"{
+                destination.movies = popularMovies
+                destination.title = "Popular"
+            } else if segue.identifier == "nowPlayingSeeAllSegue"{
+                destination.movies = nowPlayingMovies
+                destination.title = "Now Playing"
+            } else if segue.identifier == "upcomingSeeAllSegue"{
+                destination.movies = upcomingMovies
+                destination.title = "Upcoming"
+            } 
+           
         }
+        
     }
-    
-    
-}
 
+}
